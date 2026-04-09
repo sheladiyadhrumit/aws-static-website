@@ -60,7 +60,7 @@ Before you start, make sure you have:
 
 ---
 
-## Setup Guide
+## Setup Guide 1 
 
 ### Step 1 — Clone or download this project
 
@@ -151,7 +151,6 @@ ssh -i your-key.pem ubuntu@YOUR_EC2_PUBLIC_IP
 ```
 
 This is required for the docker group permissions to take effect.
-
 ---
 
 ### Step 5 — Set up Jenkins
