@@ -1,0 +1,21 @@
+# Get the Jenkins password (you need this to unlock Jenkins for the first time)
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+# Then open in your browser:
+http://YOUR_EC2_IP:8080
+```
+
+Jenkins will ask for that password, then guide you through installing plugins. Choose "Install suggested plugins" and it will set everything up automatically.
+
+---
+
+**Your project folder should now look like this:**
+```
+my-website/
+├── index.html        ✅ done
+├── style.css         ✅ done
+├── script.js         ✅ done
+├── Dockerfile        ✅ done
+├── .dockerignore     ✅ done
+├── setup-ec2.sh      ✅ done
+└── Jenkinsfile       ← next step!

@@ -1,0 +1,51 @@
+# =============================================
+#  CloudOps — .dockerignore
+#  Project: static-website-aws
+#
+#  These files/folders are EXCLUDED when Docker
+#  runs the COPY command in the Dockerfile.
+#  Think of it like .gitignore — but for Docker.
+# =============================================
+
+# --- Git files ---
+# Your git history and config are not needed inside the container
+.git
+.gitignore
+
+# --- This file itself ---
+# No need to copy it into the container
+.dockerignore
+
+# --- Jenkins pipeline file ---
+# Only needed by Jenkins, not by the web server
+Jenkinsfile
+
+# --- Documentation ---
+# README is for humans reading the repo, not for nginx to serve
+README.md
+
+# --- OS junk files ---
+# macOS creates these hidden files automatically — we don't want them in the container
+.DS_Store
+Thumbs.db
+
+# --- Editor/IDE folders ---
+# These are your local editor settings, useless inside a container
+.vscode
+.idea
+*.swp
+*.swo
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Node modules (if you ever add a build step later) ---
+node_modules/
+npm-debug.log
+
+# --- Environment files ---
+# NEVER include secret environment files in a Docker image
+.env
+.env.local
+.env.*

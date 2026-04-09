@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CloudOps — Deployed on AWS</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">CloudOps</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Live on AWS EC2</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Deployed via Jenkins CI/CD Pipeline
+      </div>
+      <h1 class="hero-title">
+        Built for the<br/>
+        <span class="hero-accent">Cloud.</span><br/>
+        Delivered Fast.
+      </h1>
+      <p class="hero-sub">
+        A production-grade static website containerized with Docker,
+        auto-deployed to AWS EC2 through a Jenkins pipeline.
+        Zero downtime. Every push.
+      </p>
+      <div class="hero-cta">
+        <a href="#stack" class="btn-primary">View Tech Stack</a>
+        <a href="#features" class="btn-ghost">How it works</a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric">
+          <span class="metric-val" data-target="99.9">0</span><span class="metric-unit">%</span>
+          <span class="metric-label">Uptime</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-val" data-target="3">&lt;1</span><span class="metric-unit">s</span>
+          <span class="metric-label">Deploy Time</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-val" data-target="100">0</span><span class="metric-unit">%</span>
+          <span class="metric-label">Automated</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="t-dot r"></span>
+        <span class="t-dot y"></span>
+        <span class="t-dot g"></span>
+        <span class="t-title">jenkins@ec2 — pipeline</span>
+      </div>
+      <div class="terminal-body" id="terminal"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">// about this project</div>
+      <h2 class="section-title">What is CloudOps?</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            This is a real-world DevOps project demonstrating how modern
+            software teams ship code to production. Every commit to the GitHub
+            repository triggers an automated pipeline that builds, tests, and
+            deploys the latest version to AWS EC2.
+          </p>
+          <p>
+            The site runs inside a Docker container managed by nginx,
+            ensuring consistent behaviour from development laptop to
+            cloud server.
+          </p>
+        </div>
+        <div class="about-cards">
+          <div class="info-card">
+            <div class="info-card-icon">🐳</div>
+            <div>
+              <div class="info-card-title">Containerized</div>
+              <div class="info-card-sub">Docker + nginx alpine</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">🔄</div>
+            <div>
+              <div class="info-card-title">CI/CD Pipeline</div>
+              <div class="info-card-sub">Jenkins automation</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">☁️</div>
+            <div>
+              <div class="info-card-title">Cloud Hosted</div>
+              <div class="info-card-sub">AWS EC2 — Ubuntu 22.04</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">📦</div>
+            <div>
+              <div class="info-card-title">Version Controlled</div>
+              <div class="info-card-sub">Git + GitHub</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="section section-dark" id="stack">
+    <div class="container">
+      <div class="section-label">// technology stack</div>
+      <h2 class="section-title">Built With</h2>
+      <div class="stack-grid">
+        <div class="stack-card" data-delay="0">
+          <div class="stack-logo">HTML5</div>
+          <div class="stack-name">HTML / CSS / JS</div>
+          <div class="stack-desc">Static frontend — the website itself. Semantic markup, responsive design, smooth interactions.</div>
+          <div class="stack-tag">Frontend</div>
+        </div>
+        <div class="stack-card" data-delay="100">
+          <div class="stack-logo">🐳</div>
+          <div class="stack-name">Docker</div>
+          <div class="stack-desc">Containerizes the app with an nginx image. Runs identically on any machine — no "works on my machine" problems.</div>
+          <div class="stack-tag">Container</div>
+        </div>
+        <div class="stack-card" data-delay="200">
+          <div class="stack-logo">⚙️</div>
+          <div class="stack-name">Jenkins</div>
+          <div class="stack-desc">CI/CD server that listens to GitHub and auto-runs the build and deploy pipeline on every push.</div>
+          <div class="stack-tag">CI/CD</div>
+        </div>
+        <div class="stack-card" data-delay="300">
+          <div class="stack-logo">AWS</div>
+          <div class="stack-name">AWS EC2</div>
+          <div class="stack-desc">Virtual server in the cloud running Ubuntu 22.04. Hosts both Jenkins and the deployed Docker container.</div>
+          <div class="stack-tag">Cloud</div>
+        </div>
+        <div class="stack-card" data-delay="400">
+          <div class="stack-logo">🔀</div>
+          <div class="stack-name">Git + GitHub</div>
+          <div class="stack-desc">Source control and remote repository. Webhook triggers Jenkins on every commit to the main branch.</div>
+          <div class="stack-tag">Version Control</div>
+        </div>
+        <div class="stack-card" data-delay="500">
+          <div class="stack-logo">nginx</div>
+          <div class="stack-name">nginx</div>
+          <div class="stack-desc">High-performance web server running inside the container. Serves static files with minimal overhead.</div>
+          <div class="stack-tag">Web Server</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIPELINE FLOW -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-label">// ci/cd workflow</div>
+      <h2 class="section-title">How the Pipeline Works</h2>
+      <div class="pipeline">
+        <div class="pipeline-step" data-step="1">
+          <div class="p-step-num">01</div>
+          <div class="p-step-icon">📝</div>
+          <div class="p-step-title">Code Push</div>
+          <div class="p-step-desc">Developer pushes code to the GitHub repository on the main branch.</div>
+          <div class="p-connector"></div>
+        </div>
+        <div class="pipeline-step" data-step="2">
+          <div class="p-step-num">02</div>
+          <div class="p-step-icon">🔔</div>
+          <div class="p-step-title">Webhook Trigger</div>
+          <div class="p-step-desc">GitHub fires a webhook to Jenkins running on EC2, starting the pipeline.</div>
+          <div class="p-connector"></div>
+        </div>
+        <div class="pipeline-step" data-step="3">
+          <div class="p-step-num">03</div>
+          <div class="p-step-icon">🐳</div>
+          <div class="p-step-title">Docker Build</div>
+          <div class="p-step-desc">Jenkins clones the repo and builds a fresh Docker image from the Dockerfile.</div>
+          <div class="p-connector"></div>
+        </div>
+        <div class="pipeline-step" data-step="4">
+          <div class="p-step-num">04</div>
+          <div class="p-step-icon">🔁</div>
+          <div class="p-step-title">Container Swap</div>
+          <div class="p-step-desc">Old container is stopped and removed, new container is started on port 80.</div>
+          <div class="p-connector"></div>
+        </div>
+        <div class="pipeline-step" data-step="5">
+          <div class="p-step-num">05</div>
+          <div class="p-step-icon">✅</div>
+          <div class="p-step-title">Live!</div>
+          <div class="p-step-desc">Updated website is live on the EC2 public IP. Total time: under 3 minutes.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <section class="section section-footer" id="contact">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <div class="logo">
+            <span class="logo-icon">⬡</span>
+            <span class="logo-text">CloudOps</span>
+          </div>
+          <p class="footer-desc">
+            A DevOps learning project. Deployed on AWS EC2 using Docker and Jenkins.
+          </p>
+          <div class="footer-stack-row">
+            <span class="fs-chip">AWS</span>
+            <span class="fs-chip">Docker</span>
+            <span class="fs-chip">Jenkins</span>
+            <span class="fs-chip">nginx</span>
+            <span class="fs-chip">GitHub</span>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-deploy-info">
+            <div class="fdi-row">
+              <span class="fdi-label">Server</span>
+              <span class="fdi-value" id="server-info">AWS EC2 — us-east-1</span>
+            </div>
+            <div class="fdi-row">
+              <span class="fdi-label">Container</span>
+              <span class="fdi-value">nginx:alpine</span>
+            </div>
+            <div class="fdi-row">
+              <span class="fdi-label">Pipeline</span>
+              <span class="fdi-value">Jenkins v2.x</span>
+            </div>
+            <div class="fdi-row">
+              <span class="fdi-label">Last deploy</span>
+              <span class="fdi-value" id="deploy-time">calculating...</span>
+            </div>
+            <div class="fdi-row">
+              <span class="fdi-label">Status</span>
+              <span class="fdi-value fdi-status"><span class="status-dot"></span> Online</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 CloudOps Project — Built for learning AWS DevOps</span>
+        <a href="https://github.com" class="gh-link" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
