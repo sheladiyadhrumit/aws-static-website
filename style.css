@@ -65,8 +65,8 @@ ul { list-style: none; }
 
 .nav.scrolled {
   background: rgba(10, 12, 16, 0.9);
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   border-color: var(--border);
 }
 
